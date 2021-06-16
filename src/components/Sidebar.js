@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Col, Container, Row } from "react-bootstrap";
 import { withRouter } from "react-router";
 import { NavLink } from "react-router-dom";
+import { FaUserMd, FaPlaneDeparture, FaStar, FaCalendarTimes } from "react-icons/fa";
 
 const SidebarStyled = styled(Col)`
   background-color: #2d3748;
@@ -12,20 +13,26 @@ const SidebarStyled = styled(Col)`
 const NavItem = styled(Row)`
   a {
     text-decoration: none;
-    color: #fff;
+    color: #d4d2d2;
   }
   a:hover {
-    color: #f1f1f1;
-    /* text-decoration: none; */
+    color: #fff;
+    text-decoration: none;
   }
-  font-size: 25px;
+  font-size: 1.5rem;
   padding: 1rem 0 1rem 0;
   font-weight: 350;
+  a svg {
+    margin: 0 1rem 0 0;
+  }
 `;
 
 const NavHeader = styled(NavItem)`
-  font-size: 30px;
+  font-size: 2rem;
   background-color: #1a202c;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+  text-align: center;
 `;
 
 function Sidebar() {
@@ -39,22 +46,22 @@ function Sidebar() {
         </NavHeader>
         <NavItem>
           <Col>
-            <NavLink to="/doctores">Doctores</NavLink>
+            <NavLink to="/doctores"><FaUserMd /><span>Doctores</span></NavLink>
           </Col>
         </NavItem>
         <NavItem>
           <Col>
-            <NavLink to="/preferencias">Preferencias</NavLink>
+            <NavLink to="/preferencias"><FaStar /><span>Preferencias</span></NavLink>
           </Col>
         </NavItem>
         <NavItem>
           <Col>
-            <NavLink to="/vacaciones">Vacaciones</NavLink>
+            <NavLink to="/vacaciones"><FaPlaneDeparture /><span>Vacaciones</span></NavLink>
           </Col>
         </NavItem>
         <NavItem>
           <Col>
-            <NavLink to="/licencias">Licencias</NavLink>
+            <NavLink to="/licencias"><FaCalendarTimes /><span>Licencias</span></NavLink>
           </Col>
         </NavItem>
       </Container>
