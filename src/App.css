@@ -72,6 +72,11 @@ body {
   padding: 0px 10px;
 }
 
+.rdt_TableRow .rdt_TableCell,
+.rdt_TableCol {
+  font-size: 1.25rem;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
